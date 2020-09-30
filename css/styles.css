@@ -1,0 +1,141 @@
+body {
+    padding: 1em;
+    font-family: Calibri;
+}
+
+@media screen and (max-width: 540px) {
+    .center {
+        width: 100%;
+    }
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* --------------- LIST ITEM -------------------- */
+
+.list-item {
+    margin: 1em 0em;
+    transition:0.5s;
+    border-radius: 5px;
+    -moz-transition:0.1s;
+    -webkit-transition:0.1s;
+    right:calc(100% - 100px);
+    background-color: rgb(248, 248, 248);
+    border-left: 2px solid rgb(172, 172, 172);
+    border-bottom: 2px solid rgb(172, 172, 172);
+}
+
+.list-item:hover {
+    margin-left: 0.5em;
+    background-color: rgb(240, 240, 240);
+}
+
+.item-date {
+    float: right;
+    color: inherit;
+    padding: 0.25em; 
+    margin-right: 1em;
+    font-style: italic;
+}
+
+/* --------------- LIST ITEM MORE --------------- */
+
+.list-item-more {
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: inherit;
+}
+
+.list-item:hover + .hide {
+    display: block;
+    color: inherit;
+}
+
+/* --------------- COLLAPSE BUTTON -------------- */
+
+.collapse-btn {
+    display: inline;
+    width: 100%;
+    padding: 0.5em 1em;
+    text-align: left;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.collapse-btn:focus {
+    outline: 0;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(95, 156, 70);
+}
+
+.collapsable {
+    display: none;
+}
+
+/* --------------- ADD BUTTON ------------------- */
+
+.add-btn {
+    font-size: 1em;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    padding: 0.4em 0.4em;
+    transition: 0.1s;
+    -moz-transition:0.1s;
+    -webkit-transition:0.1s;
+    background-color: rgb(95, 156, 70);
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.add-btn:hover {
+    padding: 0.5em 0.5em;
+    background-color: rgb(95, 200, 70);
+}
+
+.add-btn:focus {
+    outline: 0;
+}
+
+/* --------------- CLOSE BUTTON ----------------- */
+
+.del-btn {
+    font-size: 0.5em;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    padding: 0.4em 0.4em;
+    transition: 0.1s;
+    -moz-transition:0.1s;
+    -webkit-transition:0.1s;
+    background-color: rgb(156, 70, 70);
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.del-btn:hover {
+    background-color: rgb(200, 70, 70);
+}
+
+.del-btn:focus {
+    outline: 0;
+}
+
+/* --------------- OPTIONS ---------------------- */
+
+.options {
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: rgb(248, 248, 248);
+    border-left: 2px solid rgb(172, 172, 172);
+    border-bottom: 2px solid rgb(172, 172, 172);
+}

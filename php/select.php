@@ -1,10 +1,10 @@
 <?php 
 
-    include './lib/db_connection.php';
+    include 'lib/db_connection.php';
 
-    $query = "SELECT title, descptn, postdate FROM todos";
+    $query = "SELECT * FROM todos";
     $result = $conn->query($query);
-    
+
     if($result->num_rows === 0) {
         echo "<h3>Nothing to do yet...</h3>";
         exit();
@@ -12,10 +12,10 @@
 
     while($row = $result->fetch_assoc()) {
         echo "
-            <div class='list-item'>
-                <button class='del-btn'>
-                    <i class='material-icons'>close</i>
-                </button>
+            <div id='" . $row["id"] ."' 
+                class='list-item'
+                draggable='true' ondragstart='drag(event)'>
+                <span hidden>" . $row["id"] . "</span>
                 <button class='collapse-btn'>
                     " . ucfirst($row["title"]) . "
                     <span class='item-date'>" . $row["postdate"] . "</span>

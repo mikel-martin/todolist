@@ -1,11 +1,6 @@
 <?php 
 
-    if($_SERVER["REQUEST_METHOD"] === "POST") {
-        
-        $data = $_POST["id"];
+    echo "Method: " . $_SERVER["REQUEST_METHOD"];
+    echo "PHP: " . $_POST["data"];
 
-        echo $data . " item is ggoing to be deleted!";
-
-    }
-    
 ?>

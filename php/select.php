@@ -1,5 +1,9 @@
 <?php 
 
+    echo "Method: " . $_SERVER["REQUEST_METHOD"];
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+        echo "PHP: " . $_POST["data"];
+
     include 'lib/db_connection.php';
 
     $query = "SELECT * FROM todos";

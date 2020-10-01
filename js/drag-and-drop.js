@@ -12,16 +12,12 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     
     var item = document.getElementById(data);
-    item.parentNode.removeChild(item);
+    item.parentNode.removeChild(item);  
 
-    $.ajax({
-        url:"update.php",  
-        type: "post",    
-        dataType: 'json',
-        data: {id: data},
-        success:function(result){
-            console.log(result.abc);
-        }
+    $.post("update.php", {
+        data: data
+    }, function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
     });
 
 }

@@ -1,18 +1,28 @@
 body {
+    z-index: 0;
     padding: 1em;
     font-family: Calibri;
-}
-
-@media screen and (max-width: 540px) {
-    .center {
-        width: 100%;
-    }
 }
 
 .center {
     display: block;
     margin: 0 auto;
     width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: large;
+    }
+    .center {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .center {
+        width: 100%;
+    }
 }
 
 /* --------------- LIST ITEM -------------------- */
@@ -58,6 +68,7 @@ body {
 /* --------------- COLLAPSE BUTTON -------------- */
 
 .collapse-btn {
+    cursor: pointer;
     width: 100%;
     padding: 0.5em 1em;
     text-align: left;
@@ -81,6 +92,7 @@ body {
 /* --------------- ADD BUTTON ------------------- */
 
 .add-btn {
+    cursor: pointer;
     font-size: 1em;
     color: white;
     text-align: left;
@@ -91,8 +103,10 @@ body {
     -webkit-transition:0.1s;
     background-color: rgb(95, 156, 70);
     box-shadow: 0px 0px 0px transparent;
-    border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
+    border: none;
+    border-left: 2px solid rgb(172, 172, 172);
+    border-bottom: 2px solid rgb(172, 172, 172);
 }
 
 .add-btn:hover {
@@ -107,6 +121,7 @@ body {
 /* --------------- CLOSE BUTTON ----------------- */
 
 .del-btn {
+    cursor: pointer;
     font-size: 0.5em;
     color: white;
     text-align: left;
@@ -115,10 +130,12 @@ body {
     transition: 0.1s;
     -moz-transition:0.1s;
     -webkit-transition:0.1s;
+    border: none;
     background-color: rgb(156, 70, 70);
     box-shadow: 0px 0px 0px transparent;
-    border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
+    border-left: 2px solid rgb(172, 172, 172);
+    border-bottom: 2px solid rgb(172, 172, 172);
 }
 
 .del-btn:hover {
@@ -130,12 +147,109 @@ body {
     outline: 0;
 }
 
-/* --------------- OPTIONS ---------------------- */
+/* --------------- ERROR MSG -------------------- */
 
-/*.options {
-    padding: 0.5em;
+#errorMsg {
+    margin: 1em 0em;
+    padding: 0.5em 1em;
     border-radius: 5px;
-    background-color: rgb(248, 248, 248);
+    color:rgb(156, 70, 70);
+    font-weight: bold;
+    background-color: rgb(252, 251, 197);
     border-left: 2px solid rgb(172, 172, 172);
     border-bottom: 2px solid rgb(172, 172, 172);
-}*/
+}
+
+#errorMsg:empty {
+    display: none;
+}
+
+/* --------------- NEW ITEM MODAL WINDOW -------- */
+
+.form-container {
+    overflow: hidden;
+    transition: transform 0.1s ease-out; 
+    height: 0;
+    transform:scaleY(0); 
+    transform-origin:top;
+}
+
+.form-container.collapsed {
+    height: fit-content;
+    transform:scaleY(1);
+}
+
+.form-container form input[type="text"] {
+    margin: 1em 0em;
+    transition:0.5s;
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    -moz-transition:0.1s;
+    box-sizing: border-box;
+    -webkit-transition:0.1s;
+    right:calc(100% - 50px);
+    border: 0.5px solid rgb(172, 172, 172);
+    border-left: 2px solid rgb(172, 172, 172);
+    border-bottom: 2px solid rgb(172, 172, 172);
+}
+
+.form-container form input[type="text"]:hover {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+.form-container form input[type="text"]:focus {
+    outline: none;
+}
+
+.form-container form textarea {
+    width: 100%;
+    resize: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition:0.5s;
+    -moz-transition:0.1s;
+    -webkit-transition:0.1s;
+    right:calc(100% - 50px);
+    border: 0.5px solid rgb(172, 172, 172);
+    border-left: 2px solid rgb(172, 172, 172);
+    border-bottom: 2px solid rgb(172, 172, 172);
+    box-sizing: border-box;
+}
+
+.form-container form textarea:hover {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+.form-container form textarea:focus {
+    outline: none;
+}
+
+.save-btn {
+    text-align: center;
+    align-content: center;
+    width: 100%;
+    margin-top: 1em;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    border-radius: 5px;
+    padding: 0.4em 0.4em;
+    transition: 0.1s;
+    -moz-transition:0.1s;
+    -webkit-transition:0.1s;
+    background-color: rgb(95, 156, 70);
+    border: none;
+    border-left: 2px solid rgb(172, 172, 172);
+    border-bottom: 2px solid rgb(172, 172, 172);
+}
+
+.save-btn:hover {
+    font-size: 1.2em;
+}
+
+.save-btn:focus {
+    outline: none;
+}

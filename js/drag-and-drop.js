@@ -1,3 +1,4 @@
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -14,10 +15,6 @@ function drop(ev) {
     var item = document.getElementById(data);
     item.parentNode.removeChild(item);  
 
-    $.post("update.php", {
-        data: data
-    }, function(data, status){
-        alert("Data: " + data + "\nStatus: " + status);
-    });
+    $('#errorMsg').load('delete.php', { "data": data });
 
 }

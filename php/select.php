@@ -1,9 +1,5 @@
 <?php 
 
-    echo "Method: " . $_SERVER["REQUEST_METHOD"];
-    if($_SERVER["REQUEST_METHOD"] == "POST")
-        echo "PHP: " . $_POST["data"];
-
     include 'lib/db_connection.php';
 
     $query = "SELECT * FROM todos";
@@ -15,14 +11,17 @@
     }
 
     while($row = $result->fetch_assoc()) {
+        $datetime = new DateTime($row["postdate"]);
+        $date = $datetime->format("y-d-m");
         echo "
             <div id='" . $row["id"] ."' 
                 class='list-item'
-                draggable='true' ondragstart='drag(event)'>
+                draggable='true' 
+                ondragstart='drag(event)'>
                 <span hidden>" . $row["id"] . "</span>
                 <button class='collapse-btn'>
                     " . ucfirst($row["title"]) . "
-                    <span class='item-date'>" . $row["postdate"] . "</span>
+                    <span class='item-date'>" . $date . "</span>
                 </button>
                 <div class='list-item-more collapsable'>
                     " . $row["descptn"] .  "

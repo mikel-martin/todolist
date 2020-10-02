@@ -1,14 +1,12 @@
 <div style="font-family: 'Designer News', calibri, consolas;">
   <h1>Cloud Todo List</h1>
-  <p>Web application to manage your tasks</p>
-  <hr>
-  <br>
-  <img style="display: block;margin: 0 auto; padding: 0 auto;" src="doc/app_gen.gidf"/>
-  <hr>
-  <p>With this application you able to:</p>
+  <h4>Web application to manage your tasks</h4>
+  <p>This app it is been made with:</p>
   <lu>
-    <li>See the files and folders on the upload folder</li>
-    <li>Upload files</li>
-    <li>Create folders</li>
+    <li><a href="https://www.php.net/">PHP</a></li>
+    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
+    <li><a href="https://www.apachefriends.org/es/index.html">XAMPP</a></li>
   </lu>
 </div>

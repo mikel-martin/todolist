@@ -85,6 +85,10 @@ body {
     background-color: rgb(95, 156, 70);
 }
 
+.collapse-btn:hover {
+    font-weight: bold;
+}
+
 .collapsable {
     display: none;
 }
@@ -167,11 +171,11 @@ body {
 /* --------------- NEW ITEM MODAL WINDOW -------- */
 
 .form-container {
-    overflow: hidden;
-    transition: transform 0.1s ease-out; 
     height: 0;
+    overflow: hidden;
     transform:scaleY(0); 
-    transform-origin:top;
+    transform-origin:  top;
+    transition: transform 0.1s ease-out; 
 }
 
 .form-container.collapsed {
@@ -228,10 +232,10 @@ body {
 }
 
 .save-btn {
+    margin-top: 1em;
     text-align: center;
     align-content: center;
     width: 100%;
-    margin-top: 1em;
     cursor: pointer;
     font-size: 1em;
     color: white;
@@ -246,10 +250,14 @@ body {
     border-bottom: 2px solid rgb(172, 172, 172);
 }
 
-.save-btn:hover {
-    font-size: 1.2em;
-}
-
 .save-btn:focus {
     outline: none;
+}
+
+.save-btn:disabled {
+    background-color: rgb(132, 167, 119);
+}
+
+.save-btn:hover {
+    font-size: 1.05em;
 }

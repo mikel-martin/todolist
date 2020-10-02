@@ -1,12 +1,16 @@
 <?php 
 
     include 'php/lib/db_connection.php';
+    include 'php/lib/input.php';
 
-    $name = $_POST["title"];
-    $descptn = $_POST["descptn"];
+    $title = proccessInput($_POST["title"]);
+    $descptn = proccessInput($_POST["descptn"]);
+
+    if($name === "" || $descptn === "")
+        exit();
 
     $query = "INSERT INTO todos (title, descptn) 
-        VALUES('" . $name . "', '" . $descptn . "')";
+        VALUES('" . $title . "', '" . $descptn . "')";
     
     if($conn->query($query) === FALSE)
         echo "Failed to save item... UPS!</br>" . $conn->error;

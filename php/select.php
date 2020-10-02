@@ -12,7 +12,7 @@
 
     while($row = $result->fetch_assoc()) {
         $datetime = new DateTime($row["postdate"]);
-        $date = $datetime->format("y-d-m");
+        $date = $datetime->format("y-m-d");
         echo "
             <div id='" . $row["id"] ."' 
                 class='list-item'

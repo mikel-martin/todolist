@@ -9,4 +9,6 @@
     <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
     <li><a href="https://www.apachefriends.org/es/index.html">XAMPP</a></li>
   </lu>
+  <img src="doc/app_den.gif"/>
+  <img src="doc/app_del.gif"/>
 </div>

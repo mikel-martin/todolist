@@ -9,6 +9,11 @@
     <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
     <li><a href="https://www.apachefriends.org/es/index.html">XAMPP</a></li>
   </lu>
-  <img src="doc/app_den.gif"/>
+  <br>
+  <p>General look of the app</p>
+  <img src="doc/app_gen.gif"/>
+  <p>Add new tasks</p>
+  <img src="doc/app_add.PNG"/>
+  <p>Delete tasks</p>
   <img src="doc/app_del.gif"/>
 </div>

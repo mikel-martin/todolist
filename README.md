@@ -1,14 +1,11 @@
-<div style="font-family: 'Designer News', calibri, consolas;">
-  <h1>Todo List App</h1>
-  <h4>Web application to manage your tasks</h4>
-  <p>This app it is been made with:</p>
-  <lu>
-    <li><a href="https://www.php.net/">PHP</a></li>
-    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a></li>
-    <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></li>
-    <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
-    <li><a href="https://www.apachefriends.org/es/index.html">XAMPP</a></li>
-  </lu>
+# Simple To Do List App
+
+This project was created with PHP & MySQL.
+
+General look of the app:
+![App General](doc/app_gen.gif)
+
+
   <br>
   <p>General look of the app</p>
   <img src="doc/app_gen.gif"/>
